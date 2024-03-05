@@ -35,13 +35,12 @@ const playRound = (playerSelection, compSelection) => {
         return 'You win! Scissors cuts paper'; 
     }
 }
-const playerSelection = 'rock'
 
 const game = () => {
     for (let i = 0; i < 5; i++) {
-        // const playerSelection = prompt('Rock, Paper, Scissors').toLowerCase();
+        const playerSelection = prompt('Make your selection', 'Rock, Paper, Scissors').toLowerCase();
         const compSelection = computerPlay();
-        playRound(playerSelection, compSelection); 
+        playRound(playerSelection, compSelection);
     }
 
 if (playerScore > compScore) {
