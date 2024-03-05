@@ -40,7 +40,7 @@ const game = () => {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('Make your selection', 'Rock, Paper, Scissors').toLowerCase();
         const compSelection = computerPlay();
-        playRound(playerSelection, compSelection);
+        console.log('1', playRound(playerSelection, compSelection));
     }
 
 if (playerScore > compScore) {
