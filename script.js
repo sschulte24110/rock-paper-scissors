@@ -1,14 +1,14 @@
 // let playerScore = 0;
 // let compScore = 0;
 
-function computerPlay () {
+const computerPlay = () => {
     const choice = ['rock', 'paper', 'scissors'];
     const randomNum = Math.floor(Math.random() * 3);
-    const compSelection = choice[randomNum];
-    return compSelection;
+    const compChoice = choice[randomNum];
+    return compChoice;
 }
 
-function playRound(playerSelection, compSelection) {
+const playRound = (playerSelection, compSelection) => {
     if (playerSelection === 'rock' && compSelection === 'rock') {
         return 'You tie! You both picked rock';
     } else if (playerSelection === 'paper' && compSelection === 'paper') {
@@ -41,21 +41,3 @@ const game = () => {
 }
 
 game();
-
-
-
-
-
-// function computerPlay () {
-//     const choice = ['rock', 'paper', 'scissors'];
-//     const randomNum = Math.floor(Math.random() * 3);
-//     const compSelection = choice[randomNum];
-//     return compSelection;
-// }
-
-// const computerPlay = () => {
-//     const choice = ['rock', 'paper', 'scissors'];
-//     const randomNum = Math.floor(Math.random() * 3);
-//     const compChoice = choice[randomNum];
-//     return compChoice;
-// }
