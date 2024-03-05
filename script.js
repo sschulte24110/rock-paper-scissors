@@ -3,18 +3,13 @@ let compScore = 0;
 
 const computerPlay = () => {
     const choice = ['rock', 'paper', 'scissors'];
-    const randomNum = Math.floor(Math.random() * 3);
-    const compChoice = choice[randomNum];
-    return compChoice;
+    const randomNum = Math.floor(Math.random() * choice.length);
+    return choice[randomNum];
 }
 
 const playRound = (playerSelection, compSelection) => {
-    if (playerSelection === 'rock' && compSelection === 'rock') {
-        return 'You tie! You both picked rock';
-    } else if (playerSelection === 'paper' && compSelection === 'paper') {
-        return 'You tie! You both picked paper'; 
-    } else if (playerSelection === 'scissors' && compSelection === 'scissors') {
-        return 'You tie! You both picked scissors'; 
+    if (playerSelection === compSelection) {
+        return `You tie! You both picked ${playerSelection}`;
     } else if (playerSelection === 'rock' && compSelection === 'paper') {
         compScore = compScore + 1;
         return 'You lose! Paper covers rock'; 
